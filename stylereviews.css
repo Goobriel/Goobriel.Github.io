@@ -1,0 +1,11 @@
+.list {
+  list-style-type: none;
+  float: center;
+  margin: auto;
+  padding-left: 33.5%;
+}
+
+.list li {
+  border: black;
+  max-width: 400px;
+}
