@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "midterm-shop-e-commerce-store",
+  "description": "Midterm for ITI 200 Intro to cloud computing. Purpose of this project is to display HTML, CSS, Java Script, Bootstrap, and J-Query Knowledge.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

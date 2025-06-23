@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <link rel="stylesheet" href="styleMidterm.css"></link>
+
+        <title>Midterm Shop</title>
+    </head>
+
+    <body>
+ 
+   <!--------------------------------       -Navigation Bar Begins      -------------------------------------------------------->
+
+   <!--Accounts and Sign In: My Accounts, Order Status, Sign In-->
+   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><strong>InsperShirt</strong></a>
+            <a class="" href="indexWeb.html"> Home</a>
+            <a class="" href="contact.html">Contact</a>
+            <!--<a class="" href="about.html">About Us</a>-->
+            <!--<a class="" href="snew.html">New Shirts</a>
+            <a class="" href="sbest.html">Best Sellers</a>-->
+            <a class="" href="reviews.html">Reviews</a>
+            <a class="" href="moreInfo.html">More Info</a>
+
+
+
+
+                <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Accounts and Sign In 
+                </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="createAccount.html">My Accounts</a></li>
+                        <li><a class="dropdown-item" href="https://maps.app.goo.gl/7gNB5JNc4GVkEnwt7">Order Status</a></li>
+                        <li><a class="dropdown-item" href="signInPage.html">Sign In</a></li>
+                    </ul>
+            <div>
+                <div class="">
+                    <form class="d-flex" type="search" role="search">
+                        <input class="form-control me-2 split" type="search" placeholder="Search" aria-label="Search">
+                        <button type="submit" class="btn"><i class="bi bi-search split"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <a class="" href="test.html"><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
+        </div>
+    </nav>
+  
+    <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
+
+    <!--------------------------------         -Carousel ENDS          -------------------------------------------------------->
+
+
+    <!--------------------------------         -Carousel BEGINS        -------------------------------------------------------->
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="img/Carousel/Primitive3Piece.png" alt="...">
+            <div class="img-overlay">
+                <a href="Featured.html"><button class="btn btn-md">FEATURED</button></a>
+             </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img src="img/Carousel/PrimitiveLoud.png" alt="...">
+            <div class="img-overlay">
+                <a href="Featured"><button class="btn btn-md">FEATURED</button></a>
+             </div>
+        </div>
+        <div class="carousel-item">
+            <img src="img/Carousel/PrimitiveTag.png" alt="...">
+            <div class="img-overlay">
+                <a href="Featured"><button class="btn btn-md">FEATURED</button></a>
+             </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!----------------------------------------              -Carousel ENDS           -------------------------------------------------------->
+
+    <!----------------------------------------              -Gallery BEGINS           -------------------------------------------------------->
+    <div id="productButtons"></div>
+    <div class="gallery">
+        <h2 class="Heading">New Arrivals</h2>
+            <!----------------------------------------              -Row 1 Begins           -------------------------------------------------------->
+        
+            <div class="r1">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/Gallery/Honey.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Honey</h5>
+                                <p class="card-text">"Gracious words are like..." Inspired by Proverbs 16:24</p>
+                                <div id="price1">$12.00</div>    
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="proverbs16-24" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/Gallery/HebrewsRacing2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Finish the Race</h5>
+                                <p class="card-text">Finish the race of life well. Inspired by Hebrews 12:1</p>
+                                <div id="price2">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="hebrews12-1" data-product-id="1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+                  
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/Gallery/HebrewsRacing2.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Finish the Race</h5>
+                                <p class="card-text">Finish the race of life well. Inspired by Hebrews 12:1</p>
+                                <div id="price3">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="hebrews12-1" data-product-id="2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/Gallery/GoodNews.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Have You Found Him?</h5>
+                                <p class="card-text">Good news exclusive! Shirt inspired by Jeremiah 29:13.</p>
+                                <div id="price4">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now " id="jeremiah29-13" data-product-id="3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="Heading">
+                        <a href="snew.html"><button id="btn-NewArrivals" class="btn btn-lg Heading">View All</button></a>
+                    </div>
+
+            </div> 
+            <!----------------------------------------              -Row 2 Begins           -------------------------------------------------------->
+            
+            <div class="r1">
+                <div class="row">
+                    <h2 class="Heading">Best sellers</h2>
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/coolPandaPic1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cool Panda</h5>
+                                <p class="card-text">Coolest Panda around. Party Animal!</p>
+                                <div id="price5">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="panda" data-product-id="4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img\spaceCatPic1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Space Cat</h5>
+                                <p class="card-text">Explored over half the universe and only on his 2nd life.</p>
+                                <div id="price6">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="cat" data-product-id="5" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/Evil Samurai Pic.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Samurai</h5>
+                                <p class="card-text">Sharpest blade in the east. No foe has lived to tell the tale.</p>
+                                <div id="price7">$12.00</div>     
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="samurai" data-product-id="6" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <div class="col-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/crazySmileyFacePic.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Smile</h5>
+                                <p class="card-text">For happy days.</p>
+                                <div id="price8">$12.00</div> 
+                            </div>
+                            <div class="card-body">
+                            <button class="card-link btn btn-buy-now" id="smile" data-product-id="7" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Buy now!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Heading">
+                        <a href="sbest.html"><button id="btn-NewArrivals" class="btn btn-lg Heading">View All</button></a>
+                    </div>
+                </div>
+            </div> 
+            
+    <!----------------------------------------              -Gallery Ends            -------------------------------------------------------->
+
+
+    <!----------------------------------------              -Footer Begins           -------------------------------------------------------->
+    
+    <div class="container">
+        <div class="FOOT">
+            <footer class="py-5">
+                <div class="row">
+                    <div class="col-2">
+                        <h5>Customer Support</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Your Account</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Returns And Exchanges</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Deals and Steals</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Shipping And Delivery</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-2">
+                        <h5><a href="MidtTerm Contact Us.html" class="">Contact</a></h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Customer Service</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Phone</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">E-Mail</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Address</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-2">
+                        <h5><a href="aboutUs.html" class="">About Us</a></h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Careers</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Corporate Mission</a></li>
+                            <li class="nav-item mb-2"><a href="#" class="nav-link ">Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-4 offset-1">
+                        <form>
+                            <h5>Subscribe to our e-newsletter</h5>
+                            <p>Monthly digest of whats new and exciting from us.</p>
+                            <div class="d-flex w-100 gap-2">
+                                <label for="newsletter1" class="visually-hidden">Email address</label>
+                                <input id="subscription" type="text" class="form-control" placeholder="Email address">
+                                <button id="btn-subscribe" class="btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        
+                <div class="d-flex justify-content-between py-4 my-4 border-top">
+                    <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!----------------------------------------              -Footer Ends            -------------------------------------------------------->
+    <div class="Heading">
+        <h1>See how others are loving the Inspershirt experience!</h1>
+        <a href="reviews.html" style="font-family: onyx; font-size: xx-large; color: black;">Reviews/Testimonials </a>
+    </div>
+
+</div>
+
+  <!--------------------------------         -CART BEGINS        -------------------------------------------------------->
+  <div class="card shopping-cart" id="close" style="display: none;">
+    <div class="row">
+        <div class="col-md-8 cart">
+            <div class="title">
+                <div class="row">
+                    <div class="col"><h4><b>Shopping Cart</b></h4></div>
+                    <div class="col align-self-center text-right text-muted" id="cartItemCount">0 items</div>
+                </div>
+            </div>    
+            <div id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="back-to-shop"><a href="#">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+        </div>
+        <div class="col-md-4 summary">
+            <div><h5><b>Summary</b></h5></div>
+            <hr>
+            <div class="row">
+                <div class="col" style="padding-left:0;">ITEMS <span id="cartTotalItems">0</span></div>
+                <div class="col text-right">&euro; <span id="cartTotalPrice">0.00</span></div>
+            </div>
+            <form>
+                <p>SHIPPING</p>
+                <select><option class="text-muted">Standard-Delivery- &euro;5.00</option></select>
+                <p>GIVE CODE</p>
+                <input id="code" placeholder="Enter your code">
+            </form>
+            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                <div class="col">TOTAL PRICE</div>
+                <div class="col text-right">&euro; <span id="cartFinalPrice">0.00</span></div>
+            </div>
+            <button class="btn">CHECKOUT</button>
+        </div>
+    </div>
+</div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
+        <script src="scriptShop.js" type="text/javascript"></script>
+        <script src="prices.js" type="text/javascript"></script>
+<script src="path/to/purchase.js"></script>
+
+    </body>
+
+</html>
