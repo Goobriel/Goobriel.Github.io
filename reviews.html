@@ -21,83 +21,63 @@
    <!--------------------------------       -Navigation Bar Begins      -------------------------------------------------------->
 
    <!--Accounts and Sign In: My Accounts, Order Status, Sign In-->
-   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="indexWeb.html"><strong>InsperShirt</strong></a>
-            <a class="" href="indexWeb.html"> Home</a>
-            <a class="" href="contact.html">Contact</a>
-            <a class="" href="reviews.html">Reviews</a>
-            <a class="" href="moreInfo.html">More Info</a>
-                <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Accounts and Sign In 
-                </a>
-                        <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="createAccount.html">My Accounts</a></li>
-                        <li><a class="dropdown-item" href="https://maps.app.goo.gl/7gNB5JNc4GVkEnwt7">Order Status</a></li>
-                        <li><a class="dropdown-item" href="signInPage.html">Sign In</a></li>
-                    </ul>
-            <div>
-                <div class="">
-                    <form class="d-flex" type="search" role="search">
-                        <input class="form-control me-2 split" type="search" placeholder="Search" aria-label="Search">
-                        <button type="submit" class="btn"><i class="bi bi-search split"></i></button>
-                    </form>
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="indexWeb.html"><strong>InsperShirt</strong></a>
+                <a class="" href="indexWeb.html"> Home</a>
+                <a class="" href="contact.html">Contact</a>
+                <a class="" href="reviews.html">Reviews</a>
+                <a class="" href="moreInfo.html">More Info</a>
+                    <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Accounts and Sign In 
+                    </a>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="createAccount.html">My Accounts</a></li>
+                            <li><a class="dropdown-item" href="https://maps.app.goo.gl/7gNB5JNc4GVkEnwt7">Order Status</a></li>
+                            <li><a class="dropdown-item" href="signInPage.html">Sign In</a></li>
+                        </ul>
+                <div>
+                    <div class="">
+                        <form class="d-flex" type="search" role="search">
+                            <input class="form-control me-2 split" type="search" placeholder="Search" aria-label="Search">
+                            <button type="submit" class="btn"><i class="bi bi-search split"></i></button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            
-            <a class="" href="test.html"><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
-        </div>
-    </nav>
-  
-    <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
-
-
-   
-     <!--------------------------------       -Contact Form Begins      -------------------------------------------------------->
-     
-     <H1 class="Heading">Leave a comment! </H1>
-     
-     <p style="text-align: center;">Character limit 300!</p>
-     <div class ="reviewform">
-        <form>
-        <div class="row" class="mb-3">
-            <div class="col-5" id="contact_fill">
-                <label for="reviewname" class="form-label">Full Name: </label>
-                <input type="text" class="form-control" id="reviewname" placeholder="Full name: ">
-        
-                <label for="locate" class="form-label">Location: </label>
-                <input type="text" class="form-control" id="locate" placeholder="Locate:">
                 
-                <label for="response" class="form-label">Review: </label>
-                <textarea class="form-control" id="response" rows="3" placeholder="Enter comment here:"></textarea>
+                <a class="" href="test.html"><button type="button" class="btn" id="cart-icon"><i class="bi bi-cart4"></i></button></a>
             </div>
+        </nav>
+    
+        <!--------------------------------       -Navigation Bar ENDS      -------------------------------------------------------->
+
+
+    
+        <!--------------------------------       -Contact Form Begins      -------------------------------------------------------->
+        
+        <H1 class="Heading">Leave a comment! </H1>
+        
+        <p style="text-align: center;">Character limit 300!</p>
+        <div class ="reviewform">
+            <form>
+                <div class="row" class="mb-3">
+                    <div class="col-5" id="contact_fill">
+                        <label for="reviewname" class="form-label">Full Name: </label>
+                        <input type="text" class="form-control" id="reviewname" placeholder="Full name: ">
+                
+                        <label for="locate" class="form-label">Location: </label>
+                        <input type="text" class="form-control" id="locate" placeholder="Locate:">
+                        
+                        <label for="response" class="form-label">Review: </label>
+                        <textarea class="form-control" id="response" rows="3" placeholder="Enter comment here:"></textarea>
+                    </div>
+                </div>
+                <div id="liveAlertPlaceholder"></div>
+                <button type="submit" id="btn-comment" class="btn col-5">Submit Comment.</button>
+            </form>         
         </div>
-        <div id="liveAlertPlaceholder"></div>
-        <button type="submit" id="btn-comment" class="btn col-5">Submit Comment.</button>
-    </form>         
-    </div>
-<!--
-    <div class="commentSection">
-      <h3 class="reviewer">Testimonials</h3>
-        <p class="comment">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
-              numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
-              quisquam eum porro a pariatur veniam.
-        </p>
-    </div>
-  -->
-    <ul class="list ">
-        <li>hello</li>
-    </ul>
 
-   
     <!--------------------------------       -Contact Form ENDS      -------------------------------------------------------->
-
-
-
-</div>        
-
-
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="text/javascript"></script>
         <script src="reviews.js" type="text/javascript"></script>
         <script src="scriptShop.js" type="text/javascript"></script>
@@ -108,7 +88,16 @@
 
 
     <!--------------------------------       -REVIEWS START HERE       -------------------------------------------------------->
-
+<!--
+    <div class="commentSection">
+      <h3 class="reviewer">Testimonials</h3>
+        <p class="comment">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet
+              numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum
+              quisquam eum porro a pariatur veniam.
+        </p>
+    </div>
+  -->
          <!--------------------------------       -REVIEWS END HERE       -------------------------------------------------------->
       
       
