@@ -1,7 +1,12 @@
 body {
   background-color: rgb(20, 20, 20);
   font-family: Arial, sans-serif;
-  color: rgb(200,200,200)
+  color: white;
+    /* This makes the body a flex container and takes up the full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  min-height: 100vh;      /* Ensures the body takes at least the full viewport height */
+  margin: 0;              /* Removes default body margin */
 }
 
 h1{
@@ -11,22 +16,30 @@ h1{
 
 h3{
   text-align: center;
+  padding-bottom: 5px;
 }
 
-p{
+p{ 
   text-align: center;
+}
+
+pre{
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  color: white;
 }
 .navbar {
   background-color: rgb(20, 20, 20);
-  color: rgb(200,200,200);
+  color: white;
   padding: 10px;
   text-align: center;
   padding-top: 2%;
   padding-bottom: 2%;
+  display: block;
 }
 
 .navbar a{
-
   padding: 20px;
 }
 
@@ -42,9 +55,20 @@ p{
   height: 370px;
 }
 
+.card{
+  background-color: rgb(50, 50, 50);
+  color: white;
+  margin: 20px auto; /*auto for horizontal centering, 20px still applies to top and bottom margins*/
+  padding: 40px;
+  height: auto;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-section{
-  background-color: rgb(20, 20, 20);
-  color: rgb(200, 200, 200);
+  background-color: rgb(50, 50, 50);
+  color: white;
   padding: 20px;
   border-radius: 5px;
   margin: 20px auto;
@@ -57,7 +81,7 @@ p{
 
 .project-segment {
   background-color: rgb(20, 20, 20);
-  color: rgb(200, 200, 200);
+  color: white;
   padding: 1%;
   border-radius: 5px;
 }
@@ -76,7 +100,7 @@ p{
 .img-overlay .btn {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -200%);
   -ms-transform: translate(-50%, -50%);
   background-color: #000;
   color: #FFF;
@@ -92,20 +116,78 @@ p{
     color: #000;
   }
 
+/* Base styles for the responsive iframe container */
+.responsive-iframe-container {
+  position: relative; /* Essential for positioning the iframe inside */
+  display: block;
+  width: 100%; /* By default, take full width of its parent (.card) */
+  padding: 0;
+  overflow: hidden; /* Hides any overflow from the iframe */
+  margin: 0 auto; /* Center the container horizontally if it doesn't take full width */
+}
+
+/* Aspect ratio for 16:9 content (height / width = 9 / 16 = 0.5625) */
+.responsive-iframe-16by9 {
+  padding-bottom: 56.25%; /* This creates the 16:9 aspect ratio */
+}
+
+/* Styles for the iframe itself within the container */
+.responsive-iframe-item {
+  position: absolute; /* Position relative to .responsive-iframe-container */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Fill the entire container */
+  height: 100%; /* Fill the entire container */
+  border: 0; /* Remove default iframe border */
+}
 
 
+/* New: Styles for screens with a 16:9 aspect ratio (and wider) */
+@media only screen and (min-width: 1024px) and (min-aspect-ratio: 16/9) {
+  .card {
+    width: 700px; /* Card width for 16:9 screens */
+    padding: 30px;
+  }
+  
+  .card img {
+    width: 525px; /* Image width for 16:9 screens */
+    height: auto; /* Maintain aspect ratio */
+  }
 
+  .responsive-iframe-container {
+    width: 575px; /* Full width for the card */
+  }
+}
 
-  /*.resume-section {
-  background-color: rgb(20, 20,20);
-  color: rgb(200, 200, 200);
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px auto;
-  position: absolute;
-  width: 40%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; 
-}*/
+/* Media query for smaller screens (e.g., tablets and mobile phones) */
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 90vw; /* Card takes up 90% of the viewport width */
+    margin: 15px auto; /* Slightly reduced margin for smaller screens */
+    padding: 25px; /* Reduced padding for smaller screens */
+
+  }
+  #pfp-image {
+
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+}
+
+/* Optional: Even smaller breakpoint for very narrow mobile devices */
+@media only screen and (max-width: 480px) {
+  body {
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, sans-serif;
+  color: white;
+  }
+  .card {
+    width: 95vw; /* Make it slightly wider to fill more space */
+    padding: 20px; /* Further reduced padding */
+  }
+  
+}
+
