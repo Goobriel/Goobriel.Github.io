@@ -168,13 +168,6 @@ pre{
     padding: 25px; /* Reduced padding for smaller screens */
 
   }
-  #pfp-image {
-
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin: 0 auto;
-}
 }
 
 /* Optional: Even smaller breakpoint for very narrow mobile devices */
