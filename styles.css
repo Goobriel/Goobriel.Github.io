@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
   background-color: rgb(20, 20, 20);
   font-family: Arial, sans-serif;
@@ -29,6 +32,14 @@ pre{
   font-size: medium;
   color: white;
 }
+
+/* FIX NAVBAR RESPONSIVENESS AND ADD SANDWICH OPTION FOR BOTH MOBILE AND PC (maybe pc)
+       Mobile: 
+          * Sandwhich menu option
+          * column menu option
+      PC:
+          *Same as mobile, but only when screen is smaller than 1024px
+ */
 .navbar {
   background-color: rgb(20, 20, 20);
   color: white;
@@ -61,7 +72,7 @@ pre{
   margin: 20px auto; /*auto for horizontal centering, 20px still applies to top and bottom margins*/
   padding: 40px;
   height: auto;
-  width: 700px;
+  max-width: 100%; 
   justify-content: center;
   align-items: center;
 }
@@ -84,6 +95,21 @@ pre{
   color: white;
   padding: 1%;
   border-radius: 5px;
+}
+
+.btn {
+  color: #FFF;
+  background-color: rgb(20, 20, 20);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+ }
+
+.btn:hover {
+  text-decoration: underline;
+  background-color: #000;
 }
 
 #pfp-image {
@@ -143,13 +169,92 @@ pre{
 }
 
 
-/* New: Styles for screens with a 16:9 aspect ratio (and wider) */
+/* Default state for hamburger: Hidden (for screens wider than 768px) */
+#hamburger {
+    display: none !important; /* */
+}
+
+.Nav-button {
+    display: none; /* Hide the nav button by default */
+}
+
+/*    MEDIA QUERIES REGARDING NAVBAR, HAMBURGER, SIDEBAR  */
+
+/* Media query for screens 768px and narrower*/
+@media (max-width: 768px) {
+
+    .navbar {
+      display: none;
+    }
+
+    .Nav-button {
+        display: block; /* Show the nav button on smaller screens */
+        position: fixed; /* Fix it to the top right corner */
+        top: 10px; /* Adjust as needed */
+        left: 10px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it appears above other content */
+    }
+
+    /* Hide the sidebar navigation */
+    #sidebar {
+        display: none !important; /* Use !important to override any conflicting Bootstrap styles */
+    }
+
+    /* Show the dropdown (hamburger) menu */
+    #hamburger {
+        display: block !important; /* Use !important to ensure it's visible */
+        /* You might want to add some margin or padding here for better mobile display */
+        position: sticky; /* Keep it sticky as per your HTML */
+        top: 0; /* Position at the top */
+        background-color: rgb(20, 20, 20); /* Match navbar background */
+        margin-bottom: 20px;
+    }
+
+    /* Hide the sidebar column within the row */
+    .row > .col-2 {
+        display: none !important;
+    }
+        /* Make the content column take full width */
+    .row > .col-10 {
+        width: 100% !important; /* Force full width */
+        flex: 0 0 100% !important; /* Override Bootstrap's flex-basis */
+        max-width: 100% !important; /* Ensure max-width doesn't constrain */
+    }
+}
+
+/* Media query for screens above 768px (desktop/tablet landscape) */
+@media (min-width: 769px) {
+
+    /* Ensure the hamburger is hidden on larger screens */
+    #hamburger {
+        display: none !important;
+    }
+    /* Show the sidebar navigation and its column */
+    #sidebar {
+        display: block !important;
+    }
+    /* Reverting .col2 to its Bootstrap default width when sidebar is present*/
+    .row > .col-2 {
+        display: block !important; 
+        flex: 0 0 16.66666667% !important; /* Revert to col-2 Bootstrap flex-basis */
+        max-width: 16.66666667% !important; /* Revert to col-2 Bootstrap max-width */
+    }
+
+    /* Reverting .col-10 to its Bootstrap default width when sidebar is present */
+    .row > .col-10 {
+        width: 83.33333333% !important; /* Revert to col-10 Bootstrap width */
+        flex: 0 0 83.33333333% !important; /* Revert to col-10 Bootstrap flex-basis */
+        max-width: 83.33333333% !important; /* Revert to col-10 Bootstrap max-width */
+    }
+}
+
+/* Styles for screens with a 16:9 aspect ratio (and wider), primarily for card/image sizing */
 @media only screen and (min-width: 1024px) and (min-aspect-ratio: 16/9) {
   .card {
     width: 700px; /* Card width for 16:9 screens */
     padding: 30px;
   }
-  
+
   .card img {
     width: 525px; /* Image width for 16:9 screens */
     height: auto; /* Maintain aspect ratio */
@@ -159,18 +264,7 @@ pre{
     width: 575px; /* Full width for the card */
   }
 }
-
-/* Media query for smaller screens (e.g., tablets and mobile phones) */
-@media only screen and (max-width: 768px) {
-  .card {
-    width: 90vw; /* Card takes up 90% of the viewport width */
-    margin: 15px auto; /* Slightly reduced margin for smaller screens */
-    padding: 25px; /* Reduced padding for smaller screens */
-
-  }
-}
-
-/* Optional: Even smaller breakpoint for very narrow mobile devices */
+/*smaller breakpoint for very narrow mobile devices */
 @media only screen and (max-width: 480px) {
   body {
   background-color: rgb(20, 20, 20);

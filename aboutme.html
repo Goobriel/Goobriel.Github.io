@@ -5,11 +5,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 		<link rel="stylesheet" href="./styles.css">
    </head>
 
    <body>
+		
    	<div class="container">
+			<!--Horizontal Navbar for portfolio links-->
 			<nav class="navbar">
 				<div class="container-fluid">
 					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
@@ -19,63 +22,103 @@
 				</div>
 			</nav>
 
-			<div>
-				<div class="card">
-					<h3>Contact Me!</h3>
-					<div style="text-align: center;">
-						<p>Phone: (269) 416-0429</p>
-						<p>Email: Gab.prz101@gmail.com</p>
-						<p>Github: <a href="https://github.com/Goobriel" target="_blank">https://github.com/Goobriel</a></p>
+			<div class="btn-group Nav-button">
+				<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					Navigation
+				</button>
+				<ul class="dropdown-menu">
+					<a class="dropdown-item" href="index.html">Home</a>
+					<a class="dropdown-item" href="https://drive.google.com/file/d/1rbqhUrGP7XITeUkOIPO_0ogP27eqVwxl/view?usp=sharing" target="_blank">Resume</a>
+					<a class="dropdown-item" href="projects.html">Projects</a>
+					<a class="dropdown-item" href="aboutme.html">About Me</a>
+				</ul>
+			</div>
+			
+			<div class="row">
+				<div class="col-2">
+					<!-- Sidebar Navigation for cards on aboutMe.html-->
+					<nav id="sidebar" class="h-100 flex-column">
+						<nav class="nav nav-pills flex-column sticky-top">
+							<a class="nav-link" href="#contactMe">Contact Me</a>
+							<a class="nav-link" href="#aboutMe">About Me</a>
+							<a class="nav-link" href="#education">Education</a>
+							<a class="nav-link" href="#leadershipRoles">Leadership Roles</a>
+							<a class="nav-link" href="#hobbies">Hobbies</a>
+						</nav>
+					</nav>
+				</div>
+				<!--Dropdown button scrollspy for devices with max 768px-->
+				<div id="hamburger" class="dropdown sticky-top">
+					<i class="btn bi bi-list" type="button" data-bs-toggle="dropdown" aria-expanded="=false"></i>
+					<ul class="dropdown-menu">
+						<li><a class="dropdown-item" href="#contactMe">Contact Me</a></li>
+						<li><a class="dropdown-item" href="#aboutMe">About Me</a></li>
+						<li><a class="dropdown-item" href="#education">Education</a></li>
+						<li><a class="dropdown-item" href="#leadershipRoles">Leadership Roles</a></li>
+						<li><a class="dropdown-item" href="#hobbies">Hobbies</a></li>
+					</ul>
+				</div>
+				<div class="col-10">
+					<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+						<div class="card" id="contactMe">
+							<h3>Contact Me!</h3>
+							<div style="text-align: center;">
+								<p>Phone: (269) 416-0429</p>
+								<p>Email: Gab.prz101@gmail.com</p>
+								<p>Github: <a href="https://github.com/Goobriel" target="_blank">https://github.com/Goobriel</a></p>
+							</div>
+						</div>
+						<div class="card" id="aboutMe">
+							<h3>About Me</h3>
+							<p>My name is Gabriel Perez, and I am a recent graduate from the University of Michigan - Flint with a Bachelor's degree in Computer Science.
+								I am a front-end web developer and software engineer eager to apply my skills in a professional setting.
+								In my free time, I enjoy playing soccer, skateboarding, and spending time with friends and family.</p>
+						</div>
+						<div class="card" id="education">
+							<h3>Education</h3>
+							<h5>University of Michigan - Flint</h5>
+								<p>Bachelor's Degree in Computer Science, Graduated May 2025</p>
+							<h5>Bloomingdale High School</h5>
+								<p>High School Diploma, Graduated May 2020</p>
+						</div>
+						<div class="card" id="leadershipRoles">
+							<h3>Leadership Roles</h3>
+								<h5>Club President of MBL - Flint</h5>
+									<p>I was the club president for a club known as Met By Love - Flint, a part of the Met By Love organization based in Grand Rapids, Michigan.
+										As president, I was responsible for leading weekly meetings, organizing events, and ensuring the club's mission of fostering a 
+										safe space every Monday night for people to encounter the love of God through worship.
+									</p>
+								<h5>Intervarsity Small Group Leader</h5>
+									<p>In this role I was responsible for facilitating bible studies in group settings for a range of people, whether never having read the Bible 
+										, or having extensive knowledge of the Bible. A co-leader and I would go over pre-prepared material (passage, main points, application questions),
+										as well as aim to create an atmosphere that was welcoming to all who were genuinely curious and desired to participate in the bible study.
+									</p>
+								<h5>Team Captain for Varsity Soccer Team</h5>
+									<p>As the team captain for the Bloomingdale High School Varsity soccer team, I managed the team on the pitch and made sure to keep a
+										competitive and attentive atmosphere in practice.
+									</p>
+						</div>
+						<div class="card" id="hobbies">
+						<h3>Hobbies</h3>
+							<h5>Soccer</h5>
+								<p>I've played soccer since I was in elementary, and enjoyed the competitive scene until 2 years ago. I played for multiple teams and clubs, including:	
+								<br>High School Varsity - Bloomingdale High School
+								<br>Youth Club Soccer - Ankle Breakers Futsal, Chicanos Soccer Club, Ole Soccer Club, and Midwest United FC
+								<br>Collegiate Club - University of Michigan - Flint
+								<br>Semi-Professional Futsal - Flint City Futsal (No longer active) in the Futsal Champions Series (FCS)
+								</p>
+							<h5>Skateboarding</h5>
+								<p>I skateboard for fun, and though not phenomenal, I do enjoy the time spent with this hobby over the past 5 years.</p>
+							<h5>Snowboarding</h5>
+								<p>Fun fact, I partially tore my MCL my first season (winter 2024), but I'm ready to get back to the slopes with friends!</p>
+							<h5>Recreational Sports</h5>
+								<p>I've played many sports recreationally, from volleyball to pickleball, I love to stay active and have fun in community with sports.</p>
+						</div>
 					</div>
-				</div>
-				<div class="card">
-					<h3>About Me</h3>
-					<p>My name is Gabriel Perez, and I am a recent graduate from the University of Michigan - Flint with a Bachelor's degree in Computer Science.
-						I am a front-end web developer and software engineer eager to apply my skills in a professional setting.
-						In my free time, I enjoy playing soccer, skateboarding, and spending time with friends and family.</p>
-				</div>
-				<div class="card">
-					<h3>Education</h3>
-					<h5>University of Michigan - Flint</h5>
-						<p>Bachelor's Degree in Computer Science, Graduated May 2025</p>
-					<h5>Bloomingdale High School</h5>
-						<p>High School Diploma, Graduated May 2020</p>
-				</div>
-				<div class="card">
-				<h3>Leadership Roles</h3>
-					<h5>Club President of MBL - Flint</h5>
-						<p>I was the club president for a club known as Met By Love - Flint, a part of the Met By Love organization based in Grand Rapids, Michigan.
-							As president, I was responsible for leading weekly meetings, organizing events, and ensuring the club's mission of fostering a 
-							safe space every Monday night for people to encounter the love of God through worship.
-						</p>
-					<h5>Intervarsity Small Group Leader</h5>
-						<p>In this role I was responsible for facilitating bible studies in group settings for a range of people, whether never having read the Bible 
-							, or having extensive knowledge of the Bible. A co-leader and I would go over pre-prepared material (passage, main points, application questions),
-							as well as aim to create an atmosphere that was welcoming to all who were genuinely curious and desired to participate in the bible study.
-						</p>
-					<h5>Team Captain for Varsity Soccer Team</h5>
-						<p>As the team captain for the Bloomingdale High School Varsity soccer team, I managed the team on the pitch and made sure to keep a
-							competitive and attentive atmosphere in practice.
-						</p>
-				</div>
-				<div class="card">
-				<h3>Hobbies</h3>
-					<h5>Soccer</h5>
-						<p>I've played soccer since I was in elementary, and enjoyed the competitive scene until 2 years ago. I played for multiple teams and clubs, including:	
-						<br>High School Varsity - Bloomingdale High School
-						<br>Youth Club Soccer - Ankle Breakers Futsal, Chicanos Soccer Club, Ole Soccer Club, and Midwest United FC
-						<br>Collegiate Club - University of Michigan - Flint
-						<br>Semi-Professional Futsal - Flint City Futsal (No longer active) in the Futsal Champions Series (FCS)
-						</p>
-					<h5>Skateboarding</h5>
-						<p>I skateboard for fun, and though not phenomenal, I do enjoy the time spent with this hobby over the past 5 years.</p>
-					<h5>Snowboarding</h5>
-						<p>Fun fact, I partially tore my MCL my first season (winter 2024), but I'm ready to get back to the slopes with friends!</p>
-					<h5>Recreational Sports</h5>
-						<p>I've played many sports recreationally, from volleyball to pickleball, I love to stay active and have fun in community with sports.</p>
 				</div>
 			</div>
 		</div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
    </body>
 
 </html>
