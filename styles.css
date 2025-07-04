@@ -33,13 +33,6 @@ pre{
   color: white;
 }
 
-/* FIX NAVBAR RESPONSIVENESS AND ADD SANDWICH OPTION FOR BOTH MOBILE AND PC (maybe pc)
-       Mobile: 
-          * Sandwhich menu option
-          * column menu option
-      PC:
-          *Same as mobile, but only when screen is smaller than 1024px
- */
 .navbar {
   background-color: rgb(20, 20, 20);
   color: white;
@@ -77,19 +70,6 @@ pre{
   align-items: center;
 }
 
-.profile-section{
-  background-color: rgb(50, 50, 50);
-  color: white;
-  padding: 20px;
-  border-radius: 5px;
-  margin: 20px auto;
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .project-segment {
   background-color: rgb(20, 20, 20);
   color: white;
@@ -112,14 +92,10 @@ pre{
   background-color: #000;
 }
 
-#pfp-image {
-  top: 50%;
-  left: 50%;
-  transform: translate(0%, 0%);
+#pfpImage {
   border-radius: 50%;
   display: block;
-  margin: 0 auto;
-  object-fit: cover;
+  margin: 50% auto;
 }
 
 /* Style the button and place it in the middle of the container/image */
@@ -176,24 +152,21 @@ pre{
 
 .Nav-button {
     display: none; /* Hide the nav button by default */
-}
+
+ }
 
 /*    MEDIA QUERIES REGARDING NAVBAR, HAMBURGER, SIDEBAR  */
 
 /* Media query for screens 768px and narrower*/
 @media (max-width: 768px) {
 
-    .navbar {
-      display: none;
+    .min769 {
+      display: none !important;
     }
 
     .Nav-button {
         display: block; /* Show the nav button on smaller screens */
-        position: fixed; /* Fix it to the top right corner */
-        top: 10px; /* Adjust as needed */
-        left: 10px; /* Adjust as needed */
-        z-index: 1000; /* Ensure it appears above other content */
-    }
+}
 
     /* Hide the sidebar navigation */
     #sidebar {
@@ -206,6 +179,7 @@ pre{
         /* You might want to add some margin or padding here for better mobile display */
         position: sticky; /* Keep it sticky as per your HTML */
         top: 0; /* Position at the top */
+        z-index: 100; /* Ensure it stays above other content */
         background-color: rgb(20, 20, 20); /* Match navbar background */
         margin-bottom: 20px;
     }

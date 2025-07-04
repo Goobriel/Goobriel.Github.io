@@ -10,10 +10,9 @@
    </head>
 
    <body>
-		
    	<div class="container">
-			<!--Horizontal Navbar for portfolio links-->
-			<nav class="navbar">
+			<!--Horizontal Navbar for Larger Screens-->
+			<nav class="navbar min769">
 				<div class="container-fluid">
 					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
 					<a class="nav-link" href="https://drive.google.com/file/d/1rbqhUrGP7XITeUkOIPO_0ogP27eqVwxl/view?usp=sharing" target="_blank">Resume</a>
@@ -21,9 +20,10 @@
 					<a class="nav-link" href="aboutme.html">About Me</a>
 				</div>
 			</nav>
-
+			<!--Vertical Navbar button for Smaller Screens-->
+			<div class="navbar">
 			<div class="btn-group Nav-button">
-				<button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+				<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Navigation
 				</button>
 				<ul class="dropdown-menu">
@@ -33,7 +33,8 @@
 					<a class="dropdown-item" href="aboutme.html">About Me</a>
 				</ul>
 			</div>
-			
+			</div>
+
 			<div class="row">
 				<div class="col-2">
 					<!-- Sidebar Navigation for cards on aboutMe.html-->
@@ -48,7 +49,7 @@
 					</nav>
 				</div>
 				<!--Dropdown button scrollspy for devices with max 768px-->
-				<div id="hamburger" class="dropdown sticky-top">
+				<div id="hamburger" class="dropdown">
 					<i class="btn bi bi-list" type="button" data-bs-toggle="dropdown" aria-expanded="=false"></i>
 					<ul class="dropdown-menu">
 						<li><a class="dropdown-item" href="#contactMe">Contact Me</a></li>
