@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+html {
+  overflow-x: hidden;
+}
+
+}
+body {
+  position: relative;
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, sans-serif;
+  color: white;
+  display: block; /* change from flex to block */
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+h3 {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+p {
+  text-align: center;
+}
+
+pre {
+  background-color: rgb(20, 20, 20);
+  font-family: Arial, sans-serif;
+  font-size: medium;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.navbar {
+  flex: 0 0 auto;
+  background-color: #000;
+  width: 100%;
+  height: 75px;
+  padding: 0;
+}
+
+.navbar a .navlink {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar a:hover {
+  border-radius: 2px;
+  text-decoration: underline;
+}
+
+.nav-pills {
+  top: 90px;
+}
+
+.bio-container {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}
+
+.bio-text {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 370px;
+}
+
+.card {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 0;
+  right: 0; /* Centering container auto margin and left right zero */
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.project-segment {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  position: relative;
+  justify-content: center !important;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.btn {
+  color: #fff;
+  background-color: rgb(20, 20, 20);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  text-decoration: underline;
+  background-color: #000;
+}
+
+#pfpImage {
+  border-radius: 50%;
+  display: block;
+  margin: 50% auto;
+}
+
+/* Style the button and place it in the middle of the container/image */
+.img-overlay .btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -300%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.img-overlay .btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Base styles for the responsive iframe container */
+.responsive-iframe-container {
+  position: relative; /* Essential for positioning the iframe inside */
+  display: block;
+  width: 100%; /* By default, take full width of its parent (.card) */
+  padding: 0;
+  overflow: hidden; /* Hides any overflow from the iframe */
+  margin: 0 auto; /* Center the container horizontally if it doesn't take full width */
+}
+
+/* Aspect ratio for 16:9 content (height / width = 9 / 16 = 0.5625) */
+.responsive-iframe-16by9 {
+  padding-bottom: 56.25%; /* This creates the 16:9 aspect ratio */
+}
+
+/* Styles for the iframe itself within the container */
+.responsive-iframe-item {
+  position: absolute; /* Position relative to .responsive-iframe-container */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Fill the entire container */
+  height: 100%; /* Fill the entire container */
+  border: 0; /* Remove default iframe border */
+}
+
+/* Default state for hamburger: Hidden (for screens wider than 768px) */
+#hamburger {
+  display: none !important; /* */
+}
+
+.Nav-button {
+  display: none; /* Hide the nav button by default */
+}
+
+/*    MEDIA QUERIES REGARDING NAVBAR, HAMBURGER, SIDEBAR  */
+
+/* Media query for screens 768px and narrower*/
+@media (max-width: 768px) {
+  .min769 {
+    display: none !important;
+  }
+
+  .Nav-button {
+    display: block; /* Show the nav button on smaller screens */
+  }
+
+  /* Hide the sidebar navigation */
+  #sidebar {
+    display: none !important; /* Use !important to override any conflicting Bootstrap styles */
+  }
+
+  /* Show the dropdown (hamburger) menu */
+  #hamburger {
+    display: block !important; /* Use !important to ensure it's visible */
+    /* You might want to add some margin or padding here for better mobile display */
+    position: sticky; /* Keep it sticky as per your HTML */
+    top: 0; /* Position at the top */
+    z-index: 100; /* Ensure it stays above other content */
+    background-color: rgb(20, 20, 20); /* Match navbar background */
+    margin-bottom: 20px;
+  }
+
+  /* Hide the sidebar column within the row */
+  .row > .col-2 {
+    display: none !important;
+  }
+  /* Make the content column take full width */
+  .row > .col-10 {
+    width: 100% !important; /* Force full width */
+    flex: 0 0 100% !important; /* Override Bootstrap's flex-basis */
+    max-width: 100% !important; /* Ensure max-width doesn't constrain */
+  }
+}
+
+/* Media query for screens above 768px (desktop/tablet landscape) */
+@media (min-width: 769px) {
+  .mobile {
+    display: none !important;
+  }
+
+  /* Ensure the hamburger is hidden on larger screens */
+  #hamburger {
+    display: none !important;
+  }
+  /* Show the sidebar navigation and its column */
+  #sidebar {
+    display: block !important;
+  }
+  /* Reverting .col2 to its Bootstrap default width when sidebar is present*/
+  .row > .col-2 {
+    display: block !important;
+    flex: 0 0 16.66666667% !important; /* Revert to col-2 Bootstrap flex-basis */
+    max-width: 16.66666667% !important; /* Revert to col-2 Bootstrap max-width */
+  }
+
+  /* Reverting .col-10 to its Bootstrap default width when sidebar is present */
+  .row > .col-10 {
+    width: 83.33333333% !important; /* Revert to col-10 Bootstrap width */
+    flex: 0 0 83.33333333% !important; /* Revert to col-10 Bootstrap flex-basis */
+    max-width: 83.33333333% !important; /* Revert to col-10 Bootstrap max-width */
+  }
+}
+
+/* Styles for screens with a 16:9 aspect ratio (and wider), primarily for card/image sizing */
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: 700px; /* Card width for 16:9 screens */
+    padding: 30px;
+    margin: auto; /* add this */
+  }
+
+  .card img {
+    width: 525px; /* Image width for 16:9 screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .responsive-iframe-container {
+    width: 525px;
+    height: auto; /* Full width for the card */
+  }
+}
+/*smaller breakpoint for very narrow mobile devices */
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  .card {
+    width: 95vw; /* Make it slightly wider to fill more space */
+    padding: 20px; /* Further reduced padding */
+    margin: auto;
+  }
+}
