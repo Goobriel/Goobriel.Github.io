@@ -1,10 +1,12 @@
 * {
   box-sizing: border-box;
+
+}
+
 html {
   overflow-x: hidden;
 }
 
-}
 body {
   position: relative;
   background-color: rgb(20, 20, 20);
@@ -195,8 +197,13 @@ pre {
     display: none !important;
   }
 
+  .navbar .mobile {
+    align-items: center;
+  }
+
   .Nav-button {
     display: block; /* Show the nav button on smaller screens */
+    flex: 1;
   }
 
   /* Hide the sidebar navigation */
@@ -204,15 +211,29 @@ pre {
     display: none !important; /* Use !important to override any conflicting Bootstrap styles */
   }
 
-  /* Show the dropdown (hamburger) menu */
+.mobile-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  width: 100%;
+  height: 75px;
+  padding: 0 15px;
+}
+.mobile-navbar .navbar {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  flex: 0 0 auto;
+}
+
   #hamburger {
-    display: block !important; /* Use !important to ensure it's visible */
-    /* You might want to add some margin or padding here for better mobile display */
-    position: sticky; /* Keep it sticky as per your HTML */
-    top: 0; /* Position at the top */
-    z-index: 100; /* Ensure it stays above other content */
-    background-color: rgb(20, 20, 20); /* Match navbar background */
-    margin-bottom: 20px;
+    display: flex !important;
+    align-items: center;
+  }
+
+  .burMenu {
+    right: 0;
   }
 
   /* Hide the sidebar column within the row */
@@ -231,6 +252,10 @@ pre {
 @media (min-width: 769px) {
   .mobile {
     display: none !important;
+  }
+
+  .min769 .container-fluid {
+    padding: 0 50px;
   }
 
   /* Ensure the hamburger is hidden on larger screens */
@@ -260,8 +285,8 @@ pre {
 @media only screen and (min-width: 1024px) {
   .card {
     width: 700px; /* Card width for 16:9 screens */
-    padding: 30px;
     margin: auto; /* add this */
+    margin-bottom: 10px;
   }
 
   .card img {
@@ -285,5 +310,6 @@ pre {
     width: 95vw; /* Make it slightly wider to fill more space */
     padding: 20px; /* Further reduced padding */
     margin: auto;
+    margin-bottom: 10px;
   }
 }
