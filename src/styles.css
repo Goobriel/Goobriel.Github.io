@@ -5,6 +5,7 @@
 
 html {
   overflow-x: hidden;
+  height: 100%;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   display: block; /* change from flex to block */
-  min-height: 100vh;
+  height: 100%;
   margin: 0;
   width: 100%;
 }
@@ -38,9 +39,39 @@ pre {
   font-size: medium;
   color: white;
 }
+a {
+  text-decoration: none;
+}
+
+.chill-btn {
+  /* Layout & Typography */
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  
+  /* Chill Colors & 3D Shadow */
+  background: #a8dadc; /* Soft Mint */
+  color: #1d3557;
+  box-shadow: 0 6px #457b9d; /* Darker blue "depth" */
+  
+  /* Smooth Animation */
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.chill-btn:hover {
+  background: #bde0fe; /* Slightly brighter on hover */
+  transform: translateY(2px);
+  box-shadow: 0 4px #457b9d;
+}
 
 .container {
+  position: relative;
   margin: 0 auto;
+  padding: 20px;
   width: 100%;
   max-width: 100%;
 }
@@ -72,15 +103,21 @@ pre {
   justify-content: center;
   align-items: center;
   margin: auto;
-  padding: auto;
+  padding: 50px;
 }
 
-.bio-text {
+.bio-intro {
   position: relative;
   justify-content: center;
   align-items: center;
   margin: auto;
   padding: auto;
+}
+
+.bio-skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .content {
@@ -94,10 +131,9 @@ pre {
   background-color: rgb(50, 50, 50);
   color: white;
   position: relative;
-  top: 50%;
   left: 0;
   right: 0; /* Centering container auto margin and left right zero */
-  margin: 10px;
+  margin: 20px auto;   /* centers it */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +167,9 @@ pre {
 #pfpImage {
   border-radius: 50%;
   display: block;
-  margin: 50% auto;
+  margin: auto;
+  width: 100%;
+  max-width: 150px; /* cap the size on mobile */
 }
 
 /* Style the button and place it in the middle of the container/image */
@@ -210,6 +248,13 @@ pre {
   #sidebar {
     display: none !important; /* Use !important to override any conflicting Bootstrap styles */
   }
+    .card {
+    width: 95vw; /* Make it slightly wider to fill more space */
+    height: auto;
+    padding: 20px; /* Further reduced padding */
+    margin: auto;
+    margin-bottom: 10px;
+  }
 
 .mobile-navbar {
   display: flex;
@@ -258,6 +303,23 @@ pre {
     padding: 0 50px;
   }
 
+  #index-container {
+  position: relative;
+  height: calc(100% - 75px);
+  margin: 0 auto;
+  padding: 50px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .card {
+    max-width: 700px;
+    margin: 20px auto; /* add this */
+  }
+
   /* Ensure the hamburger is hidden on larger screens */
   #hamburger {
     display: none !important;
@@ -283,9 +345,10 @@ pre {
 
 /* Styles for screens with a 16:9 aspect ratio (and wider), primarily for card/image sizing */
 @media only screen and (min-width: 1024px) {
+  
   .card {
     width: 700px; /* Card width for 16:9 screens */
-    margin: auto; /* add this */
+        margin: 20px auto;
     margin-bottom: 10px;
   }
 
@@ -308,6 +371,7 @@ pre {
   }
   .card {
     width: 95vw; /* Make it slightly wider to fill more space */
+    height: auto;
     padding: 20px; /* Further reduced padding */
     margin: auto;
     margin-bottom: 10px;
