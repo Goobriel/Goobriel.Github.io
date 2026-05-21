@@ -6,28 +6,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 		<link rel="stylesheet" href="src/styles.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body>
 		<!-- Navbar OUTSIDE container -->
-		<nav class="navbar min769 sticky-top">
+		<nav class="navbar min769">
 			<div class="container-fluid">
-				<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-				<a class="nav-link" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-				<a class="nav-link" href="projects.html">Projects</a>
-				<a class="nav-link" href="aboutme.html">About Me</a>
+				<h1>Gabriel Perez</h1>
+				<a class="navigation-btn active" aria-current="page" href="index.html">Home</a>
+				<a class="navigation-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+				<a class="navigation-btn" href="projects.html">Projects</a>
+				<a class="navigation-btn" href="aboutme.html">About Me</a>
 			</div>
 		</nav>
 		<div class="navbar mobile sticky-top">
-			<div class="btn-group Nav-button">
-				<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<div class="Nav-button">
+				<button class="navigation-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Navigation
 				</button>
 				<ul class="dropdown-menu">
-					<a class="dropdown-item" href="index.html">Home</a>
-					<a class="dropdown-item" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-					<a class="dropdown-item" href="projects.html">Projects</a>
-					<a class="dropdown-item" href="aboutme.html">About Me</a>
+					<a class="dropdown-item body-btn" href="index.html">Home</a>
+					<a class="dropdown-item body-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+					<a class="dropdown-item body-btn" href="projects.html">Projects</a>
+					<a class="dropdown-item body-btn" href="aboutme.html">About Me</a>
 				</ul>
 			</div>
 		</div>

@@ -7,106 +7,114 @@
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 		<link rel="stylesheet" href="src/styles.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body>
 		<!-- Navbar OUTSIDE container -->
-		<nav class="navbar min769 sticky-top">
+		<nav class="navbar min769">
 			<div class="container-fluid">
-				<a class="nav-link" href="index.html">Home</a>
-				<a class="nav-link" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-				<a class="nav-link" href="projects.html">Projects</a>
-				<a class="nav-link active" aria-current="page" href="aboutme.html">About Me</a>
+				<h1>Gabriel Perez</h1>
+				<a class="navigation-btn" href="index.html">Home</a>
+				<a class="navigation-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+				<a class="navigation-btn" href="projects.html">Projects</a>
+				<a class="navigation-btn active" aria-current="page" href="aboutme.html">About Me</a>
 			</div>
 		</nav>
-		<div class="mobile-navbar">
-			<div class="navbar mobile">
-				<div class="btn-group Nav-button">
-					<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+		<div class="navbar mobile-about-nav-container">
+			<div class="mobile">
+				<div class="Nav-button">
+					<button class="navigation-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 						Navigation
 					</button>
 					<ul class="dropdown-menu">
-						<a class="dropdown-item" href="index.html">Home</a>
-						<a class="dropdown-item" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-						<a class="dropdown-item" href="projects.html">Projects</a>
-						<a class="dropdown-item" href="aboutme.html">About Me</a>
+						<a class="dropdown-item body-btn" href="index.html">Home</a>
+						<a class="dropdown-item body-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+						<a class="dropdown-item body-btn" href="projects.html">Projects</a>
+						<a class="dropdown-item body-btn" href="aboutme.html">About Me</a>
 					</ul>
 				</div>
 			</div>
-			<div id="hamburger" class="dropdown">
-				<i class="btn bi bi-list burMenu" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+			<div id="hamburger" class="">
+				<i class="navigation-btn bi bi-list burMenu" type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
 				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="#contactMe">Contact Me</a></li>
-					<li><a class="dropdown-item" href="#aboutMe">About Me</a></li>
-					<li><a class="dropdown-item" href="#education">Education</a></li>
-					<li><a class="dropdown-item" href="#leadershipRoles">Leadership Roles</a></li>
-					<li><a class="dropdown-item" href="#hobbies">Hobbies</a></li>
+					<li><a class="dropdown-item body-btn" href="#contactMe">Contact Me</a></li>
+					<li><a class="dropdown-item body-btn" href="#aboutMe">About Me</a></li>
+					<li><a class="dropdown-item body-btn" href="#education">Education</a></li>
+					<li><a class="dropdown-item body-btn" href="#leadershipRoles">Leadership Roles</a></li>
+					<li><a class="dropdown-item body-btn" href="#hobbies">Hobbies</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<div class="container">
-			<!--Dropdown button scrollspy for devices with max 768px-->
-			<div class="row">
-				<div class="col-2">
+		<div class="container" id="about-me-container">
 					<!-- Sidebar Navigation -->
-					<nav id="sidebar" class="h-100 flex-column">
-						<nav class="nav nav-pills flex-column sticky-top">
-							<a class="nav-link" href="#contactMe">Contact Me</a>
-							<a class="nav-link" href="#aboutMe">About Me</a>
-							<a class="nav-link" href="#education">Education</a>
-							<a class="nav-link" href="#leadershipRoles">Leadership Roles</a>
-							<a class="nav-link" href="#hobbies">Hobbies</a>
-						</nav>
-					</nav>
-				</div>
+				<aside class="about-me-sidebar-desktop sticky-top">
+					<h2>Calibration</h2>
+					<div class="about-me-links">
+						<a class="body-btn" href="#contactMe">Contact</a>
+						<a class="body-btn" href="#aboutMe">About Me</a>
+						<a class="body-btn" href="#education">Education</a>
+						<a class="body-btn" href="#leadershipRoles">Leadership Roles</a>
+						<a class="body-btn" href="#hobbies">Hobbies</a>
+					</div>
+				</aside>
+				<div class="about-me-main-content scrollspy-example-2" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" tabindex="0">
+					<div class="card" id="contactMe">
+						<h2>Contact Me!</h2>
+						<div style="text-align: center">
+							<p>Email: Gab.prz101@gmail.com</p>
+							<p>Github: <a href="https://github.com/Goobriel" target="_blank">https://github.com/Goobriel</a></p>
+							<p>LinkedIn: <a href="https://www.linkedin.com/in/gabriel-perez-umf25/" target="_blank">gabriel-perez-umf25/</a></p>
+						</div>
+					</div>
+					<div class="card" id="aboutMe">
+						<h2>About Me</h2>
+						<p>From a young age I loved solving puzzles and working within structure — but I also loved creativity. 
+						I learned to love math for its unchanging nature and beautiful complexity, and I found the world of 
+						filmmaking equally fascinating.</p>
 
-				<div class="col-10">
-					<div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
-						<div class="card" id="contactMe">
-							<h3>Contact Me!</h3>
-							<div style="text-align: center">
-								<p>Phone: (269) 416-0429</p>
-								<p>Email: Gab.prz101@gmail.com</p>
-								<p>Github: <a href="https://github.com/Goobriel" target="_blank">https://github.com/Goobriel</a></p>
-							</div>
-						</div>
-						<div class="card" id="aboutMe">
-							<h3>About Me</h3>
-							<p>My name is Gabriel Perez, and I am a recent graduate from the University of Michigan - Flint with a Bachelor's degree in Computer Science. I am a front-end web developer and software engineer eager to apply my skills in a professional setting. In my free time, I enjoy playing soccer, skateboarding, and spending time with friends and family.</p>
-						</div>
-						<div class="card" id="education">
-							<h3>Education</h3>
-							<h5>University of Michigan - Flint</h5>
-							<p>Bachelor's Degree in Computer Science, Graduated May 2025</p>
-							<h5>Bloomingdale High School</h5>
-							<p>High School Diploma, Graduated May 2020</p>
-						</div>
-						<div class="card" id="leadershipRoles">
-							<h3>Leadership Roles</h3>
-							<h5>Club President of MBL - Flint</h5>
-							<p>I was the club president for a club known as Met By Love - Flint, a part of the Met By Love organization based in Grand Rapids, Michigan. As president, I was responsible for leading weekly meetings, organizing events, and ensuring the club's mission of fostering a safe space every Monday night for people to encounter the love of God through worship.</p>
-							<h5>Intervarsity Small Group Leader</h5>
-							<p>In this role I was responsible for facilitating bible studies in group settings for a range of people, whether never having read the Bible, or having extensive knowledge of the Bible. A co-leader and I would go over pre-prepared material (passage, main points, application questions), as well as aim to create an atmosphere that was welcoming to all who were genuinely curious and desired to participate in the bible study.</p>
-							<h5>Team Captain for Varsity Soccer Team</h5>
-							<p>As the team captain for the Bloomingdale High School Varsity soccer team, I managed the team on the pitch and made sure to keep a competitive and attentive atmosphere in practice.</p>
-						</div>
-						<div class="card" id="hobbies">
-							<h3>Hobbies</h3>
-							<h5>Soccer</h5>
-							<p>I've played soccer since I was in elementary, and enjoyed the competitive scene until 2 years ago. I played for multiple teams and clubs, including: <br>High School Varsity - Bloomingdale High School <br>Youth Club Soccer - Ankle Breakers Futsal, Chicanos Soccer Club, Ole Soccer Club, and Midwest United FC <br>Collegiate Club - University of Michigan - Flint <br>Semi-Professional Futsal - Flint City Futsal (No longer active) in the Futsal Champions Series (FCS)</p>
-							<h5>Skateboarding</h5>
-							<p>I skateboard for fun, and though not phenomenal, I have enjoyed the time spent with this hobby over the past 5 years.</p>
-							<h5>Snowboarding</h5>
-							<p>Fun fact, I partially tore my MCL my first season (winter 2024), but I'm ready to get back to the slopes with friends!</p>
-							<h5>Recreational Sports</h5>
-							<p>I've played many sports recreationally, from volleyball to pickleball, I love to stay active and have fun in community with sports.</p>
-						</div>
+						<p>Then on December 17th, 2010, I watched Tron: Legacy — a film that captured every inch of my desire 
+						for structure, creativity, and beauty in one place. I learned that programming existed, but had no 
+						resources to pursue it until my first semester of college. Typing "Hello World" took me straight back 
+						to being that kid in complete awe.</p>
+
+						<p>Today I focus primarily on web development and UI/UX, where I have the most hands-on experience. 
+						But I'm genuinely drawn to the idea of embedded and software engineering as well — my brother and I 
+						share a dream of building our own mechatronics someday. He brings the creativity and art, I bring the code. 
+						Thanks for reading — make sure to check out the projects if you haven't already!</p>
+
+					</div>
+					<div class="card" id="education">
+						<h2>Education</h2>
+						<h5>University of Michigan - Flint</h5>
+						<p>Bachelor's Degree in Computer Science, Graduated May 2025</p>
+						<h5>Bloomingdale High School</h5>
+						<p>High School Diploma, Graduated May 2020</p>
+					</div>
+					<div class="card" id="leadershipRoles">
+						<h2>Leadership Roles</h2>
+						<h5>Club President of MBL - Flint</h5>
+						<p>I was the club president for a club known as Met By Love - Flint, a part of the Met By Love organization based in Grand Rapids, Michigan. As president, I was responsible for leading weekly meetings, organizing events, and ensuring the club's mission of fostering a safe space every Monday night for people to encounter the love of God through worship.</p>
+						<h5>Intervarsity Small Group Leader</h5>
+						<p>In this role I was responsible for facilitating bible studies in group settings for a range of people, whether never having read the Bible, or having extensive knowledge of the Bible. A co-leader and I would go over pre-prepared material (passage, main points, application questions), as well as aim to create an atmosphere that was welcoming to all who were genuinely curious and desired to participate in the bible study.</p>
+						<h5>Team Captain for Varsity Soccer Team</h5>
+						<p>As the team captain for the Bloomingdale High School Varsity soccer team, I managed the team on the pitch and made sure to keep a competitive and attentive atmosphere in practice.</p>
+					</div>
+					<div class="card" id="hobbies">
+						<h2>Hobbies</h2>
+						<h5>Soccer</h5>
+						<p>I've played soccer since I was in elementary, and enjoyed the competitive scene until 2 years ago. I played for multiple teams and clubs, including: <br>High School Varsity - Bloomingdale High School <br>Youth Club Soccer - Ankle Breakers Futsal, Chicanos Soccer Club, Ole Soccer Club, and Midwest United FC <br>Collegiate Club - University of Michigan - Flint <br>Semi-Professional Futsal - Flint City Futsal (No longer active) in the Futsal Champions Series (FCS)</p>
+						<h5>Skateboarding</h5>
+						<p>I skateboard for fun, and though not phenomenal, I have enjoyed the time spent with this hobby over the past 5 years.</p>
+						<h5>Snowboarding</h5>
+						<p>Fun fact, I partially tore my MCL my first season (winter 2024), but I'm ready to get back to the slopes with friends!</p>
 					</div>
 				</div>
 			</div>
-		</div>
-
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 	</body>
 </html>

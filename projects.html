@@ -6,41 +6,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 		<link rel="stylesheet" href="src/styles.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap" rel="stylesheet">
+
 	</head>
 
 	<body>
 		<!-- Navbar OUTSIDE container -->
-		<nav class="navbar min769 sticky-top">
+		<nav class="navbar min769">
 			<div class="container-fluid">
-				<a class="nav-link" href="index.html">Home</a>
-				<a class="nav-link" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-				<a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
-				<a class="nav-link" href="aboutme.html">About Me</a>
+				<h1>Gabriel Perez</h1>
+				<a class="navigation-btn" href="index.html">Home</a>
+				<a class="navigation-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+				<a class="navigation-btn active" aria-current="page" href="projects.html">Projects</a>
+				<a class="navigation-btn" href="aboutme.html">About Me</a>
 			</div>
 		</nav>
 		<div class="navbar mobile">
-			<div class="btn-group Nav-button">
-				<button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<div class="Nav-button">
+				<button class="navigation-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 					Navigation
 				</button>
 				<ul class="dropdown-menu">
-					<a class="dropdown-item" href="index.html">Home</a>
-					<a class="dropdown-item" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
-					<a class="dropdown-item" href="projects.html">Projects</a>
-					<a class="dropdown-item" href="aboutme.html">About Me</a>
+					<a class="dropdown-item body-btn" href="index.html">Home</a>
+					<a class="dropdown-item body-btn" href="https://docs.google.com/document/d/1tko5u1bqWWp3WOciEfJgpYNRSBSM8uR5JHwktaiwWkI/edit?usp=sharing" target="_blank">Resume</a>
+					<a class="dropdown-item body-btn" href="projects.html">Projects</a>
+					<a class="dropdown-item body-btn" href="aboutme.html">About Me</a>
 				</ul>
 			</div>
 		</div>
 
 		<div class="container">
-			<div class="project-segment">
 				<h1>Projects</h1>
 
-				<div class="project-segment">
-					<h3>Abel's Visuals & Portraits</h3>
+				<div class="card">
+					<h2>Abel's Visuals & Portraits</h2>
 					<p>This project involved designing and developing a client-facing photography portfolio website for a freelance photographer based in San Antonio, Texas.</p>
 					<p>Tech Stack - <i>HTML, CSS, JavaScript, Bootstrap, jQuery, Netlify, GitHub</i></p>
-					<div class="content card">
+					<div class="content">
 						<img src="imgs/Abel's_Visuals_and_Portraits_cover_image.png" alt="Abel's Visuals & Portraits Website" class="img-fluid rounded">
 						<div class="img-overlay">
 							<a class="chill-btn" href="https://abelsvisualsandportraits.com" target="_blank">View Website</a>
@@ -48,12 +52,12 @@
 					</div>
 				</div>
 
-				<div class="project-segment">
-					<h3>Data Visualization of cereal ratings</h3>
+				<div class="card">
+					<h2>Data Visualization of cereal ratings</h2>
 					<p>This project involved using R to visualize data from a dataset given in class, Intro to Data Visualization, in a clear and informative manner.</p>
 					<p>Tech Stack - <i>R, ggplot2, tidyverse, Google Slides</i></p>
-					<div class="content card">
-						<div class="responsive-iframe-container responsive-iframe-16by9">
+					<div class="content">
+						<div class="responsive-iframe-container">
 							<iframe class="responsive-iframe-item"
 								src="https://docs.google.com/presentation/d/e/2PACX-1vS-0IfkWUzQXY2KfLvNFisuSk-LwtlejbgoPyFMqKG8jPfErExP4P_DLeQTOAjtDH996pqLvsmz5zl1/pubembed?start=false&loop=true&delayms=5000"
 								frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -61,19 +65,18 @@
 					</div>
 				</div>
 
-				<div class="project-segment">
-					<h3>Mockup Website</h3>
+				<div class="card">
+					<h2>Mockup Website</h2>
 					<p>This project involved using basic front-end and backend web development tools to create a website for my Intro to Cloud Computation Course.</p>
 					<p>Tech Stack - <i>HTML, CSS, JavaScript, Bootstrap, Node.JS, Amazon RDS, Postgres SQL</i></p>
-					<div class="content card">
+					<div class="content">
 						<img src="imgs/WebsiteOverview.png" alt="Mockup Website" class="img-fluid rounded">
 						<div class="img-overlay">
-							<a class="chill-btn" href="e_com_midterm_project/indexWeb.html" target="_blank">View Website</a>
+							<a class="chill-btn" href="e_com_midterm_project/indexWeb.html" target="_blank">View Project</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 	</body>
